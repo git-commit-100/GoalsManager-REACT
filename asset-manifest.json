@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/GoalsManager-REACT/static/css/main.00c94508.chunk.css",
+    "main.js": "/GoalsManager-REACT/static/js/main.1586fed7.chunk.js",
+    "main.js.map": "/GoalsManager-REACT/static/js/main.1586fed7.chunk.js.map",
+    "runtime-main.js": "/GoalsManager-REACT/static/js/runtime-main.5c82490c.js",
+    "runtime-main.js.map": "/GoalsManager-REACT/static/js/runtime-main.5c82490c.js.map",
+    "static/js/2.7c203d7a.chunk.js": "/GoalsManager-REACT/static/js/2.7c203d7a.chunk.js",
+    "static/js/2.7c203d7a.chunk.js.map": "/GoalsManager-REACT/static/js/2.7c203d7a.chunk.js.map",
+    "static/js/3.b52c6289.chunk.js": "/GoalsManager-REACT/static/js/3.b52c6289.chunk.js",
+    "static/js/3.b52c6289.chunk.js.map": "/GoalsManager-REACT/static/js/3.b52c6289.chunk.js.map",
+    "index.html": "/GoalsManager-REACT/index.html",
+    "static/css/main.00c94508.chunk.css.map": "/GoalsManager-REACT/static/css/main.00c94508.chunk.css.map",
+    "static/js/2.7c203d7a.chunk.js.LICENSE.txt": "/GoalsManager-REACT/static/js/2.7c203d7a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c82490c.js",
+    "static/js/2.7c203d7a.chunk.js",
+    "static/css/main.00c94508.chunk.css",
+    "static/js/main.1586fed7.chunk.js"
+  ]
+}
