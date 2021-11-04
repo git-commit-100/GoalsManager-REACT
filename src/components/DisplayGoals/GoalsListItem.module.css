@@ -1,0 +1,15 @@
+.goal-item{
+    background-color: #E0B0FF;
+    margin: 0 auto;
+    padding: .5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    overflow: auto;
+    max-height: 5rem;
+}
+
+.goal-info{
+    margin-inline: 1rem;
+}

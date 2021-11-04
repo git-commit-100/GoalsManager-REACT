@@ -1,0 +1,82 @@
+.goal-form {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #1f2022;
+  width: 80%;
+  color: white;
+  border-radius: 8px;
+}
+
+.goal-form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 0.5rem;
+}
+
+form label {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 20px;
+  font-weight: 600;
+  margin: auto 0;
+}
+
+.goal-input {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+  height: 2rem;
+  border: 2px solid #4b0082;
+  background-color: white;
+}
+
+.goal-input::placeholder {
+  color: transparent;
+  font-style: italic;
+}
+
+.goal-input:focus {
+  background-color: #e0b0ff;
+}
+
+@media (max-width: 550px) {
+  .goal-input {
+    grid-column: 1 / 4;
+  }
+}
+
+.goal-input.invalid{
+  border: 2px solid #FF0000;
+  background-color: #FF7F7F;
+}
+
+.goal-input.invalid::placeholder{
+  color: #343434;
+}
+
+.submit-btn {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #4b0082;
+  border: none;
+  outline: none;
+  color: white;
+  height: 3rem;
+}
+
+@media (max-width: 550px) {
+  .submit-btn {
+    grid-column: 1 / 4;
+  }
+}
