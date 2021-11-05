@@ -1,13 +1,5 @@
-.goals-list-section{
-    margin: 0 auto;
-    margin-top: 1.5rem;
-    background-color: #1F2022;
-    width: 80%;
-    border-radius: 8px;
-    padding: .5rem 1rem;
-}
 
-.goals-list{
+ .goals-list-section .goals-list{
     color: white;
     font-size: 20px;
     font-weight: 600;

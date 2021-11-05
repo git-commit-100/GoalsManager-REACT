@@ -13,16 +13,14 @@ function App() {
 
   const handleObjFromForm = (goalObj) => {
     setDataGoalObj((prevDataObj) => {
-      goalObjArr = [...prevDataObj];
-      goalObjArr.unshift(goalObj);
-      return goalObjArr;
+      return [goalObj,...prevDataObj];
     });
   };
 
   const handleDeleteGoal = (goalId) => {
     setDataGoalObj((prevDataObj) => {
-      goalObjArr = prevDataObj.filter((goal) => goal.id != goalId);
-      return goalObjArr;
+      let tempObjArr = prevDataObj.filter((goal) => goal.id != goalId);
+      return tempObjArr;
     });
   };
 
@@ -39,7 +37,7 @@ function App() {
   if (dataGoalObj.length > 0) {
     content = (
       <GoalsList
-        onShowList={dataGoalObj}
+        goals={dataGoalObj}
         onHandleDeleteGoal={handleDeleteGoal}
       />
     );

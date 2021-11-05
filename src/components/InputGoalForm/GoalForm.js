@@ -1,25 +1,32 @@
 import { useState } from "react";
+import Card from "../UI/Card";
+import Button from "../UI/Button";
 import styles from "./GoalForm.module.css";
+import ErrorModal from "../UI/ErrorModal";
 
 //driver component
-const goalForm = (props) => {
-  const [isInputValid, setIsInputValid] = useState(true);
+const GoalForm = (props) => {
   const [inputValue, setInputValue] = useState("");
+  const [showModal, setShowModal] = useState();
 
-  const handleInputChange = () => {
+  const handleInputChange = (e) => {
     //input chnages when something is wriiten
-    setIsInputValid(true);
-    let value = document.getElementById("goal-input-field").value;
-    setInputValue(value);
+    setInputValue(e.target.value);
   };
+
+  const hideErrorModel = ()=>{
+    setShowModal(null);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     //checking if input is empty
     if (inputValue.trim().length === 0) {
-      setIsInputValid(false);
-      document.getElementById("goal-input-field").placeholder =
-        "cannot be empty...";
+      setShowModal({
+        heading: "Invalid Input !",
+        body: "Input Cannot Be Empty. Try Again !",
+        btnTxt:"Okay"
+      });
       return;
     }
     let inputObj = { id: Math.random(), body: inputValue };
@@ -29,26 +36,29 @@ const goalForm = (props) => {
   };
 
   return (
-    <div className={styles["goal-form"]}>
-      <form onSubmit={handleSubmit}>
-        <label>Add Your Goal Here</label>
-        <input
-          type="text"
-          className={`${styles["goal-input"]} ${
-            !isInputValid && styles["invalid"]
-          }`}
-          id="goal-input-field"
-          autoComplete="off"
-          spellCheck="false"
-          onChange={handleInputChange}
-          value={inputValue}
-        />
-        <button className={styles["submit-btn"]} type="submit">
-          Submit
-        </button>
-      </form>
+    <div>
+      {showModal && (
+        <ErrorModal heading={showModal.heading} body={showModal.body} btn-text={showModal.btnTxt} hideModel={hideErrorModel}/>
+      )}
+      <Card className={styles["goal-form"]}>
+        <form onSubmit={handleSubmit}>
+          <label>Add Your Goal Here</label>
+          <input
+            type="text"
+            className={styles["goal-input"]}
+            id="goal-input-field"
+            autoComplete="off"
+            spellCheck="false"
+            onChange={handleInputChange}
+            value={inputValue}
+          />
+          <Button className={styles["submit-btn"]} type="submit">
+            Submit
+          </Button>
+        </form>
+      </Card>
     </div>
   );
 };
 
-export default goalForm;
+export default GoalForm;

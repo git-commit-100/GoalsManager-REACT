@@ -1,11 +1,12 @@
 import styles from "./GoalsList.module.css";
+import Card from "../UI/Card";
 import GoalsListItem from "./GoalsListItem";
 
 const GoalsList = (props) => {
   return (
-    <div className={styles["goals-list-section"]}>
+    <Card className={styles["goals-list-section"]}>
       <ul className={styles["goals-list"]}>
-        {props.onShowList.map((goalObj) => {
+        {props.goals.map((goalObj) => {
           return (
             <GoalsListItem
               key={goalObj.id}
@@ -16,7 +17,7 @@ const GoalsList = (props) => {
           );
         })}
       </ul>
-    </div>
+    </Card>
   );
 };
 
