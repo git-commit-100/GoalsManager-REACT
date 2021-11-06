@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import styles from "./GoalForm.module.css";
@@ -36,7 +36,9 @@ const GoalForm = (props) => {
   };
 
   return (
-    <div>
+    // returning a Fragment instead of a div 
+    //can be written as '<>' or '<React.Fragment>' or '<Fragment>'
+    <>
       {showModal && (
         <ErrorModal heading={showModal.heading} body={showModal.body} btn-text={showModal.btnTxt} hideModel={hideErrorModel}/>
       )}
@@ -57,7 +59,7 @@ const GoalForm = (props) => {
           </Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 
